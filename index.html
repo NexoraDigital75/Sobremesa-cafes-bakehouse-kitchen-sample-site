@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#244536">
+<meta name="description" content="Sobremesa — Cafe, Bakehouse, Kitchen in Venkatagiri, Jubilee Hills, Hyderabad.">
+<title>Sobremesa | Cafe • Bakehouse • Kitchen</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--ink:#20332a;--green:#294c3a;--cream:#f7f1e7;--paper:#fffdf8;--muted:#6e756e;--line:#ded8ca;--accent:#b47a43}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",Arial,sans-serif}
+a{text-decoration:none;color:inherit}.wrap{width:min(1160px,92%);margin:auto}
+header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(247,241,231,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(32,51,42,.1)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:"Playfair Display",serif;font-size:25px;letter-spacing:.08em}.brand small{display:block;font:600 9px "DM Sans";letter-spacing:.24em;text-align:center;margin-top:-3px}
+.navlinks{display:flex;gap:28px;font-size:13px;font-weight:600}.navlinks a:hover{color:var(--accent)}
+.menu-btn{display:none;border:0;background:none;font-size:25px;color:var(--ink)}
+.hero{min-height:92vh;padding-top:72px;display:grid;grid-template-columns:1.02fr .98fr;align-items:stretch}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:70px 6vw 70px max(4vw,calc((100vw - 1160px)/2))}
+.kicker{text-transform:uppercase;letter-spacing:.25em;font-size:11px;font-weight:700;color:var(--accent);margin-bottom:18px}
+h1,h2{font-family:"Playfair Display",serif;font-weight:600;line-height:1.02;margin:0}
+h1{font-size:clamp(54px,7vw,94px);letter-spacing:-.04em}.hero p{font-size:17px;line-height:1.7;color:var(--muted);max-width:510px;margin:26px 0}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:14px 20px;border-radius:999px;font-size:13px;font-weight:700;border:1px solid var(--green);display:inline-flex;align-items:center;justify-content:center}.btn.primary{background:var(--green);color:white}.btn.secondary{background:transparent}
+.hero-photo{min-height:680px;background-image:url("https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_900,h_1050/DINEOUT_ALL_RESTAURANTS/IMAGES/RESTAURANT_IMAGE_SERVICE/2025/2/4/e4c4fea6-c71e-4344-9f53-2fc8d71f03ef_image5a211ad452d4b483cb4465565ddeea191.JPG");background-size:cover;background-position:center}
+.strip{background:var(--green);color:#fff;padding:17px 0}.strip-inner{display:flex;justify-content:center;gap:35px;flex-wrap:wrap;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+section{padding:100px 0}.intro{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}.intro h2{font-size:clamp(40px,5vw,62px)}.intro p{color:var(--muted);line-height:1.8;font-size:16px}
+.gallery{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-top:42px}.gallery img{width:100%;height:100%;object-fit:cover;border-radius:20px;display:block}.g1{height:470px}.g2{height:225px}.g3{height:225px;margin-top:20px}
+.section-head{text-align:center;margin-bottom:48px}.section-head h2{font-size:58px}.section-head p{color:var(--muted);margin:14px auto 0;max-width:650px;line-height:1.7}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:34px}.tab{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:10px 16px;font-size:12px;font-weight:700;cursor:pointer}.tab.active{background:var(--green);color:white;border-color:var(--green)}
+.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.item{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px 21px;display:flex;gap:20px;justify-content:space-between;min-height:126px}.item h3{font-family:"Playfair Display",serif;font-size:21px;margin:0 0 7px;font-weight:600}.item p{font-size:13px;line-height:1.55;color:var(--muted);margin:0;max-width:500px}.price{font-weight:700;white-space:nowrap;font-size:14px}.tag{display:inline-block;margin-top:9px;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);font-weight:800}
+.note{margin:22px auto 0;max-width:820px;padding:15px 18px;border-radius:14px;background:#eee7d9;color:#62675f;font-size:12px;line-height:1.6;text-align:center}
+.visit{background:var(--green);color:white}.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.visit h2{font-size:58px}.visit p{color:#dce6df;line-height:1.8}.details{display:grid;gap:12px;margin-top:24px}.detail{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.18);font-size:14px}.detail strong{display:block;margin-bottom:4px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#bcd0c3}.map{height:410px;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.2)}.map iframe{width:100%;height:100%;border:0}
+footer{padding:30px 0;background:#1b2e26;color:#cfd8d2;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:800px){.navlinks{display:none}.menu-btn{display:block}.hero{grid-template-columns:1fr}.hero-copy{padding:60px 6% 45px;min-height:600px}.hero-photo{min-height:55vh}.intro,.visit-grid{grid-template-columns:1fr;gap:35px}.gallery{grid-template-columns:1fr}.g1,.g2,.g3{height:280px;margin-top:0}.menu-grid{grid-template-columns:1fr}.section-head h2,.visit h2{font-size:46px}section{padding:75px 0}}
+@media(max-width:460px){.nav{height:64px}.brand{font-size:21px}.hero{padding-top:64px}h1{font-size:55px}.hero-copy{min-height:530px}.hero p{font-size:15px}.btn{width:100%}.strip-inner{gap:12px;font-size:10px}.item{padding:17px;gap:12px}.item h3{font-size:19px}.price{font-size:13px}.map{height:300px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#">SOBREMESA<small>CAFE • BAKEHOUSE • KITCHEN</small></a>
+  <nav class="navlinks"><a href="#about">About</a><a href="#menu">Menu</a><a href="#visit">Visit</a></nav>
+  <button class="menu-btn" aria-label="Open menu" onclick="document.querySelector('.navlinks').style.display=document.querySelector('.navlinks').style.display==='flex'?'none':'flex'">☰</button>
+</div></header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="kicker">Venkatagiri • Jubilee Hills • Hyderabad</div>
+    <h1>A little<br>something<br>to savour.</h1>
+    <p>A warm neighbourhood cafe, bakehouse and kitchen for slow coffees, fresh bakes, comforting plates and long conversations.</p>
+    <div class="buttons"><a class="btn primary" href="#menu">Explore the menu</a><a class="btn secondary" href="#visit">Find us</a></div>
+  </div>
+  <div class="hero-photo" role="img" aria-label="Sobremesa entrance and garden"></div>
+</section>
+
+<div class="strip"><div class="wrap strip-inner"><span>Artisanal coffee</span><span>In-house bakes</span><span>Continental & global plates</span><span>Indoor & outdoor seating</span></div></div>
+
+<section id="about"><div class="wrap">
+  <div class="intro">
+    <div><div class="kicker">The Sobremesa mood</div><h2>Stay for<br>the little things.</h2></div>
+    <div><p>Sobremesa is a cafe, bakehouse and kitchen in Jubilee Hills, Hyderabad. The space pairs a relaxed garden setting with a menu spanning coffee, pasta, mains, pastries, desserts and more.</p><p>This sample site uses the current public menu listings available for the Jubilee Hills outlet. Menu names and prices below are kept tied to those listings rather than inventing dishes.</p></div>
+  </div>
+  <div class="gallery">
+    <img class="g1" src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_900,h_700/DINEOUT_ALL_RESTAURANTS/IMAGES/RESTAURANT_IMAGE_SERVICE/2025/2/4/e380b715-362e-44d3-a5d4-e5d7a339be06_image8cfe93d9ff6c74e5180c28e7c68e1311e.JPG" alt="Sobremesa outdoor seating">
+    <div><img class="g2" src="https://b.zmtcdn.com/data/pictures/2/20122962/cfb6aab7816a45083ad9b4e3ff793aa8.jpg" alt="Sobremesa indoor seating"><img class="g3" src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_900,h_700/DINEOUT_ALL_RESTAURANTS/IMAGES/RESTAURANT_IMAGE_SERVICE/2025/2/4/e4c4fea6-c71e-4344-9f53-2fc8d71f03ef_image5a211ad452d4b483cb4465565ddeea191.JPG" alt="Sobremesa entrance"></div>
+  </div>
+</div></section>
+
+<section id="menu"><div class="wrap">
+  <div class="section-head"><div class="kicker">A taste of the menu</div><h2>Made to linger over.</h2><p>Selected items from the current public listings for Sobremesa's Jubilee Hills outlet. Prices shown are the listed prices and can change.</p></div>
+  <div class="tabs">
+    <button class="tab active" data-cat="all">All</button><button class="tab" data-cat="pasta">Pizza & Pasta</button><button class="tab" data-cat="dessert">Desserts</button><button class="tab" data-cat="pastry">Viennoiserie</button><button class="tab" data-cat="coffee">Coffee</button><button class="tab" data-cat="mains">Mains</button>
+  </div>
+  <div class="menu-grid" id="menuGrid"></div>
+  <div class="note">Dish photos are intentionally not substituted with generic food photography. Where a current, item-specific photo could not be verified from a public listing, this sample uses no misleading dish image. The gallery above uses verified Sobremesa venue photographs.</div>
+</div></section>
+
+<section id="visit" class="visit"><div class="wrap visit-grid">
+  <div>
+    <div class="kicker" style="color:#d7a46e">Come by</div><h2>See you<br>at Sobremesa.</h2>
+    <p>A calm corner in Venkatagiri, Jubilee Hills — easy to reach, easy to stay a while.</p>
+    <div class="details">
+      <div class="detail"><strong>Address</strong>8-2-293/82/A/593, Road Number 31, Aditya Enclave, Venkatagiri, Jubilee Hills, Hyderabad, Telangana 500033</div>
+      <div class="detail"><strong>Hours</strong>Daily • 10:00 AM – 10:30 PM</div>
+      <div class="detail"><strong>Phone</strong><a href="tel:+917842776820">+91 78427 76820</a></div>
+    </div>
+    <div class="buttons" style="margin-top:25px"><a class="btn" style="border-color:#dce6df;color:white" href="https://www.google.com/maps/search/?api=1&query=Sobremesa+Cafe+Bakehouse+Kitchen+Road+31+Jubilee+Hills+Hyderabad" target="_blank">Get directions</a><a class="btn" style="border-color:#dce6df;color:white" href="https://www.swiggy.com/restaurants/sobremesa-jubilee-hills-hyderabad-468075/dineout" target="_blank">View on Swiggy</a></div>
+  </div>
+  <div class="map"><iframe loading="lazy" src="https://www.google.com/maps?q=Sobremesa%20Cafe%20Bakehouse%20Kitchen%20Road%2031%20Jubilee%20Hills%20Hyderabad&output=embed"></iframe></div>
+</div></section>
+</main>
+
+<footer><div class="wrap footer-row"><span>© Sobremesa — Cafe • Bakehouse • Kitchen</span><span>Sample website by NexoraDigital</span></div></footer>
+
+<script>
+const items=[
+{cat:"pasta",name:"Roasted Bell Pepper And Burrata",price:515,desc:"Fusilli in roasted bell pepper sauce with a drizzle of chilli oil, topped with creamy burrata."},
+{cat:"pasta",name:"Spaghetti Aglio Olio",price:360,desc:"Spaghetti tossed with garlic, marinated olives, extra virgin olive oil and white wine."},
+{cat:"pasta",name:"Parmesan And Cream Pasta",price:375,desc:"Spaghetti tossed in cream sauce with parmesan and mozzarella cheese."},
+{cat:"pasta",name:"Penne Arrabbiata",price:360,desc:"Fresh penne tossed with red chillies, basil, garlic, EVOO and Roma tomato sauce."},
+{cat:"pasta",name:"Pesto Chicken Risotto",price:485,desc:"A creamy Italian risotto with pesto and tender chicken."},
+{cat:"dessert",name:"Devil Chocolate Cake Pastry",price:399,desc:"Devil chocolate sponge, Sao Palme 36% milk chocolate mousse, soft ganache and chocolate nutty crunch."},
+{cat:"dessert",name:"Biscoff Tres Leches",price:399,desc:"Vanilla butter sponge soaked in three kinds of milk with Lotus Biscoff spread, Biscoff chantilly and biscuit."},
+{cat:"dessert",name:"London Chocolate Caramel",price:449,desc:"Moist chocolate sponge with chocolate ganache and caramel whip ganache."},
+{cat:"dessert",name:"Classic Vanilla Burnt Basque Cheesecake",price:399,desc:"Classic vanilla crumble base with Tahitian vanilla-infused creamy burnt Basque cheesecake."},
+{cat:"dessert",name:"Sugar Free Chocolate Delice",price:399,desc:"Gluten-free and sugar-free chocolate delicacy with pecan crisp, moist chocolate sponge, namelaka and dark chocolate almond rocher."},
+{cat:"dessert",name:"Noisette",price:449,desc:"Moist hazelnut sponge, milk chocolate mousse, hazelnut praline and chocolate hazelnut crunch."},
+{cat:"dessert",name:"Tiramisu",price:399,desc:"Ladyfinger coffee sponge in house-roasted coffee syrup, mascarpone mousse and cocoa."},
+{cat:"pastry",name:"Plain Butter Croissant",price:199,desc:"Crispy golden pastry made with Corman 82% butter, with delicate buttery layers and a light airy texture."},
+{cat:"pastry",name:"Korean Bun",price:299,desc:"Soft fluffy bread roll with cream cheese filling and a sweet-savoury garlic butter coating."},
+{cat:"pastry",name:"Tandoori Paneer Tikka Croissant",price:319,desc:"Flaky croissant with spiced tandoori paneer filling."},
+{cat:"pastry",name:"Custard Croissant",price:299,desc:"Flaky buttery pastry filled with rich vanilla custard."},
+{cat:"pastry",name:"Pain Au Chocolat",price:229,desc:"Classic French pastry made from buttery flaky croissant dough wrapped around dark chocolate."},
+{cat:"pastry",name:"Almond Croissant",price:299,desc:"Flaky pastry filled with sweet almond cream, topped with sliced almonds and icing sugar."},
+{cat:"pastry",name:"Hazelnut Croissant",price:299,desc:"Decadent flaky pastry filled with rich hazelnut chocolate cream."},
+{cat:"coffee",name:"Long Black",price:200,desc:"Single short espresso and hot water."},
+{cat:"coffee",name:"Cappuccino",price:245,desc:"Classic espresso-based coffee with frothed milk."},
+{cat:"coffee",name:"Flat White (Double Shot)",price:280,desc:"Double-shot espresso with frothed milk."},
+{cat:"coffee",name:"Moccachino",price:300,desc:"A blend of espresso and chocolate."},
+{cat:"coffee",name:"Hazelnut Cappuccino",price:245,desc:"Double-shot espresso, hazelnut syrup and thick crema."},
+{cat:"coffee",name:"Cafe Latte",price:225,desc:"Espresso with steamed milk."},
+{cat:"coffee",name:"Spanish Latte",price:280,desc:"Sweet and warm coffee; listed as a signature coffee."},
+{cat:"mains",name:"Paneer Katsu Fried Rice",price:495,desc:"Crispy fried paneer served with mushroom truffle fried rice."},
+{cat:"mains",name:"Chicken Katsu Fried Rice",price:515,desc:"Crispy fried chicken breast served with mushroom truffle fried rice and fried egg."},
+{cat:"mains",name:"House Special Thai Green Curry",price:450,desc:"House-made green curry paste with seasonal vegetables and jasmine rice."},
+{cat:"mains",name:"Butter Garlic Prawns",price:420,desc:"Prawns sautéed in a rich butter and garlic sauce with fresh herbs and lemon."},
+{cat:"mains",name:"Honey Basil Chicken",price:410,desc:"Tender chicken pieces cooked in honey basil sauce and herbs."}
+];
+const labels={pasta:"Pizza & Pasta",dessert:"Desserts & Pastries",pastry:"Viennoiserie",coffee:"Hot Coffee",mains:"Mains"};
+const grid=document.getElementById("menuGrid");
+function render(cat="all"){grid.innerHTML=items.filter(x=>cat==="all"||x.cat===cat).map(x=>`<article class="item"><div><h3>${x.name}</h3><p>${x.desc}</p><span class="tag">${labels[x.cat]}</span></div><div class="price">₹${x.price}</div></article>`).join("")}
+render();
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(b.dataset.cat)}));
+</script>
+</body>
+</html>
